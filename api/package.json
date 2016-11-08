@@ -24,6 +24,8 @@
   "dependencies": {
     "confidence": "3.x.x",
     "glue": "4.x.x",
+    "google-auth-library": "^0.9.9",
+    "googleapis": "^14.2.0",
     "hapi": "15.x.x",
     "hoek": "4.x.x",
     "jade": "1.x.x",

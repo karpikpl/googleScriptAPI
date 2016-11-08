@@ -1,5 +1,6 @@
 /*jshint esversion: 6, node: true*/
 'use strict';
+const google = require('./google');
 
 exports.register = function (server, options, next) {
 
@@ -8,7 +9,11 @@ exports.register = function (server, options, next) {
         path: '/',
         handler: function (request, reply) {
 
-            reply({ message: 'Welcome to the plot device.' });
+          const message = request.query.message || 'Hello from node!';
+
+          google(message);
+
+          reply({ message: 'Google API called' });
         }
     });
 
