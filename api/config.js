@@ -17,7 +17,7 @@ const config = {
         functionName: 'myFunction',
         scopes: [
             'https://www.googleapis.com/auth/spreadsheets'
-        ],
+        ]
     },
     port: {
         web: {
@@ -32,13 +32,13 @@ const config = {
 const store = new Confidence.Store(config);
 
 
-exports.get = function(key) {
+exports.get = function (key) {
 
     return store.get(key, criteria);
 };
 
 
-exports.meta = function(key) {
+exports.meta = function (key) {
 
     return store.meta(key, criteria);
 };

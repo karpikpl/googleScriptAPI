@@ -26,7 +26,7 @@ lab.experiment('Config', () => {
 
     lab.test('it gets config scriptId', (done) => {
 
-        Code.expect(Config.get('/scriptId')).to.be.a.string();
+        Code.expect(Config.get('/script/id')).to.be.a.string();
         done();
     });
 });

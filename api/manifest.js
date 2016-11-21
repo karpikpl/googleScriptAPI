@@ -11,7 +11,7 @@ const criteria = {
 
 
 const manifest = {
-    $meta: 'This file defines the plot device.',
+    $meta: 'This file defines the API and WEB.',
     server: {
         debug: {
             request: ['error']

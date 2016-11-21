@@ -1,6 +1,6 @@
 /*jshint esversion: 6, node: true*/
 'use strict';
-const google = require('./google');
+const Google = require('./google');
 
 exports.register = function (server, options, next) {
 
@@ -9,14 +9,15 @@ exports.register = function (server, options, next) {
         path: '/',
         handler: function (request, reply) {
 
-          const message = request.query.message || 'Hello from node!';
-          google(message, (err, res) => {
-            if(err) {
-              return reply(err);
-            }
+            const message = request.query.message || 'Hello from node!';
+            Google(message, (err, res) => {
 
-            reply(res);
-          });
+                if (err) {
+                    return reply(err);
+                }
+
+                reply(res);
+            });
         }
     });
 
