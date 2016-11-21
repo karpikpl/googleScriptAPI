@@ -10,10 +10,13 @@ exports.register = function (server, options, next) {
         handler: function (request, reply) {
 
           const message = request.query.message || 'Hello from node!';
+          google(message, (err, res) => {
+            if(err) {
+              return reply(err);
+            }
 
-          google(message);
-
-          reply({ message: 'Google API called' });
+            reply(res);
+          });
         }
     });
 
